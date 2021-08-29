@@ -5,16 +5,19 @@
 
   &__form {
     padding: 3rem 2rem;
+
     &--heading {
       font-size: 2.4rem;
       line-height: 3.4rem;
       color: $heading-color;
       font-weight: 400;
+      margin: 0;
     }
     &--subheading {
       font-size: 1.4rem;
       line-height: 2.6rem;
       color: $subheading-color;
+      margin: 1rem auto 0;
     }
     &--email {
       height: 6rem;
@@ -29,6 +32,8 @@
       justify-content: space-between;
       align-items: center;
 
+      margin: 2rem auto;
+
       &-input {
         outline: none;
         background: $white;
@@ -37,6 +42,7 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
         padding-left: 1.9rem;
+        color: $grey;
       }
       &-button {
         outline: none;
@@ -47,6 +53,65 @@
         img {
           width: 2.4rem;
         }
+      }
+    }
+    &--checkbox {
+      height: 2.8rem;
+      width: 29.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &-choice {
+        position: relative;
+
+        &-input {
+          width: 2.6rem;
+          height: 2.6rem;
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+
+          &-span {
+            display: inline-grid;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 0.3rem;
+            border: 0.2rem solid $blue;
+          }
+        }
+
+        &-input:checked {
+          &-span {
+            background-color: $blue;
+          }
+        }
+      }
+
+      &-label {
+        font-size: 1.6rem;
+        margin-left: 1.5rem;
+        line-height: 2.8rem;
+        color: $grey;
+
+        span {
+          color: black;
+          border-bottom: 0.1rem solid black;
+        }
+      }
+    }
+
+    &--icons {
+      height: 100%;
+      padding: 0 4.8rem 0 3.3rem;
+
+      &-structure {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        width: 21.4rem;
       }
     }
   }

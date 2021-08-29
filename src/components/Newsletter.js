@@ -24,12 +24,28 @@ const Newsletter = () => (
         </button>
       </div>
 
-      <checkbox placeholder="I agree to terms of service" />
-      <div>
-        <img src={facebook_icon} alt="facebook icon" />
-        <img src={instagram_icon} alt="instagram icon" />
-        <img src={twitter_icon} alt="twitter icon" />
-        <img src={youtube_icon} alt="youtube icon" />
+      <div className="newsletter__form--checkbox">
+        <div className="newsletter__form--checkbox-choice">
+          <input
+            type="checkbox"
+            name="terms"
+            placeholder="I agree to terms of service"
+            className="newsletter__form--checkbox-choice-input"
+          />
+          <span className="newsletter__form--checkbox-choice-input-span"></span>
+        </div>
+        <label className="newsletter__form--checkbox-label">
+          I agree to <span>terms of service</span>
+        </label>
+      </div>
+      <hr />
+      <div className="newsletter__form--icons">
+        <div className="newsletter__form--icons-structure">
+          <img src={facebook_icon} alt="facebook icon" />
+          <img src={instagram_icon} alt="instagram icon" />
+          <img src={twitter_icon} alt="twitter icon" />
+          <img src={youtube_icon} alt="youtube icon" />
+        </div>
       </div>
     </div>
   </div>
