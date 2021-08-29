@@ -1,9 +1,10 @@
 import React from "react";
+import background_image from "../images/image_summer.png";
+import Newsletter from "./Newsletter";
 
 const Main = () => (
-  <div>
-    <h1>Dmitrijs Paklons</h1>
-    <h3>Front-End Developer</h3>
+  <div className="background">
+    <Newsletter />
   </div>
 );
 

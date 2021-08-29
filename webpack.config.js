@@ -19,6 +19,14 @@ module.exports = {
         //when one loader use loader when more then use "use"
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        loader: "url-loader",
+        test: /\.png$/i,
+      },
+      {
+        test: /\.svg$/,
+        loader: "file-loader",
+      },
     ],
   },
   devtool: "eval-cheap-module-source-map",
