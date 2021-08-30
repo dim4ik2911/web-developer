@@ -31,20 +31,29 @@ const Newsletter = () => (
             name="terms"
             placeholder="I agree to terms of service"
             className="newsletter__form--checkbox-choice-input"
+            id="terms"
           />
           <span className="newsletter__form--checkbox-choice-input-span"></span>
         </div>
-        <label className="newsletter__form--checkbox-label">
+        <label className="newsletter__form--checkbox-label" for="terms">
           I agree to <span>terms of service</span>
         </label>
       </div>
       <hr />
       <div className="newsletter__form--icons">
         <div className="newsletter__form--icons-structure">
-          <img src={facebook_icon} alt="facebook icon" />
-          <img src={instagram_icon} alt="instagram icon" />
-          <img src={twitter_icon} alt="twitter icon" />
-          <img src={youtube_icon} alt="youtube icon" />
+          <a href="#">
+            <img src={facebook_icon} alt="facebook icon" />
+          </a>
+          <a href="#">
+            <img src={instagram_icon} alt="instagram icon" />
+          </a>
+          <a href="#">
+            <img src={twitter_icon} alt="twitter icon" />
+          </a>
+          <a href="#">
+            <img src={youtube_icon} alt="youtube icon" />
+          </a>
         </div>
       </div>
     </div>
