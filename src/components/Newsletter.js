@@ -32,6 +32,7 @@ const Newsletter = () => (
             placeholder="I agree to terms of service"
             className="newsletter__form--checkbox-choice-input"
             id="terms"
+            checked="true"
           />
           <span className="newsletter__form--checkbox-choice-input-span"></span>
         </div>

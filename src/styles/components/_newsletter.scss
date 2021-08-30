@@ -71,11 +71,13 @@
         &-input {
           width: 2.6rem;
           height: 2.6rem;
-          opacity: 0;
+
           cursor: pointer;
           position: absolute;
           left: 0;
           top: 0;
+          background-color: $blue;
+          opacity: 0;
 
           &-span {
             display: inline-grid;
@@ -88,7 +90,6 @@
 
         &-input:checked {
           opacity: 1;
-          background-color: $blue;
         }
       }
 
@@ -110,15 +111,15 @@
       padding: 0 4.8rem 0 3.3rem;
 
       &-structure {
-        // display: flex;
-        // justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         margin-top: 2rem;
         width: 21.4rem;
       }
     }
   }
 }
-@media (min-width: $large-desktop) {
+@media (min-width: $tablet) {
   .newsletter {
     background: transparent; //changed
     height: 37.1rem;
