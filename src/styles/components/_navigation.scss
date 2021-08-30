@@ -12,9 +12,18 @@ header {
   padding: 0 2rem;
   height: 6.6rem;
 
-  &__image {
-    height: 4rem;
-    width: 2.5rem;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--image {
+      height: 4rem;
+      width: 2.5rem;
+    }
+    &--text {
+      opacity: 0;
+    }
   }
 
   &__choice {
@@ -33,4 +42,46 @@ header {
 }
 
 @media (min-width: $large-desktop) {
+  header {
+    position: absolute;
+    width: auto;
+
+    top: 9.5rem;
+    left: 10rem;
+  }
+
+  .navigation {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 48rem;
+    height: 4rem;
+    padding: 0;
+
+    &__logo {
+      &--image {
+        margin: 0 1rem 1.5rem 0;
+      }
+      &--text {
+        opacity: 1;
+        width: 7.8rem;
+      }
+    }
+
+    &__choice {
+      display: flex;
+    }
+
+    &__choice > a {
+      text-decoration: none;
+      color: $grey;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+    &__choice > a:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
 }

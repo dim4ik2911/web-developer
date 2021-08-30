@@ -5,3 +5,14 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: $large-desktop) {
+  .background {
+    background-position: right center;
+    background-size: 65%;
+    min-width: calc(100% - 35%);
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

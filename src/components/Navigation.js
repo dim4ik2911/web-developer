@@ -1,10 +1,18 @@
 import React from "react";
-import mobile_logo from "../icons/mobile_logo.svg";
+import main_logo from "../icons/main_logo.svg";
+import pineapple_logo from "../icons/pineapple_logo.svg";
 
 const Navigation = () => (
   <header>
     <div className="navigation">
-      <img src={mobile_logo} alt="image" className="navigation__image" />
+      <div className="navigation__logo">
+        <img src={main_logo} alt="image" className="navigation__logo--image" />
+        <img
+          src={pineapple_logo}
+          alt="image"
+          className="navigation__logo--text"
+        />
+      </div>
       <div className="navigation__choice">
         <a href="#">
           <p>About</p>
