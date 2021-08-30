@@ -1,7 +1,6 @@
 .background {
-  flex-grow: 1;
-  min-width: 335px;
-  min-height: 568px;
+  min-width: 100vw;
+  min-height: calc(100vh - 6.6rem);
   display: flex;
   justify-content: center;
   align-items: center;
