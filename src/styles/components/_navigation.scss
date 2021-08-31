@@ -62,49 +62,54 @@ header {
 }
 
 @media (min-width: $small-desktop) {
+  header {
+    position: absolute; //new
+    width: auto; //new
+    top: 8rem; //new
+    left: 3rem; //new
+  }
+
   .navigation {
-    height: 10rem; //changed
+    background-color: transparent; //changed
+    width: 36rem; //new
+    height: 4rem; //changed
+    padding: 0; //changed
 
     &__logo {
       &--image {
-        height: 5rem; //changed
-        width: 3rem; //changed
-        margin: 0 1rem 1.5rem 0; //new
+        padding-bottom: 1.2rem; //new
       }
       &--text {
-        opacity: 1; //chagned
-        width: 7.8rem; //new
+        opacity: 1; //changed
+        margin-left: 1.2rem; //new
       }
     }
 
+    &__choice > a:not(:last-child) {
+      margin-right: 1.5rem; //changed
+    }
+  }
+}
+@media (min-width: $large-desktop) {
+  header {
+    top: 11rem; //chnaged
+    left: 10rem; //changed
+  }
+
+  .navigation {
+    width: 48rem; //changed
+
+    &__logo {
+      &--text {
+        margin-left: 1.5rem; //changed
+      }
+    }
     &__choice > a {
       font-size: 1.6rem; //changed
       line-height: 2.6rem; //changed
     }
     &__choice > a:not(:last-child) {
       margin-right: 3rem; //changed
-    }
-  }
-}
-@media (min-width: $large-desktop) {
-  header {
-    position: absolute; //new
-    width: auto; //new
-    top: 11rem; //new
-    left: 10rem; //new
-  }
-
-  .navigation {
-    background-color: transparent; //changed
-    width: 48rem; //new
-    height: 4rem; //changed
-    padding: 0; //changed
-
-    &__logo {
-      &--image {
-        height: 4rem; //changed
-        width: 2.5rem; //changed
-      }
     }
   }
 }

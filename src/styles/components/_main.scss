@@ -2,7 +2,6 @@
   background-position: 58% 100%;
   background-size: auto calc(100vh - 6.6rem);
 
-  min-width: 100vw;
   min-height: calc(100vh - 6.6rem);
 
   display: flex;
@@ -12,17 +11,20 @@
 
 @media (min-width: $small-desktop) {
   .background {
-    background-size: auto calc(100vh - 10rem); //changed
+    background-position: right;
+    background-size: auto 100%; //changed
+
     min-height: calc(100vh - 10rem); //changed
+    justify-content: flex-start; //changed
+    align-items: flex-start; //changed
   }
 }
 @media (min-width: $large-desktop) {
   .background {
-    background-position: right center;
-    background-size: 65%;
+    background-position: right center; //changed
+    background-size: 65%; //changed
 
-    min-height: 100vh;
-    justify-content: flex-start;
-    align-items: flex-start;
+    min-height: 100vh; //changed
+    justify-content: flex-start; //changed
   }
 }

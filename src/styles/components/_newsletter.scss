@@ -187,19 +187,117 @@
     }
   }
 }
-@media (min-width: $large-desktop) {
+@media (min-width: $small-desktop) {
   .newsletter {
     background: transparent; //changed
     height: 37.1rem;
-    width: 40rem; //changed
-    margin: 2rem auto;
+    width: 30rem; //changed
+
     position: absolute; //new
-    left: 14rem; //new
+    left: 7rem; //new
     top: 50%; //new
     transform: translateY(-50%); //new
     &__form {
       padding: 0rem 0rem; //changed
 
+      &--heading {
+        font-size: 2.8rem; //changed
+        line-height: 4rem; //changed
+      }
+      &--subheading {
+        font-size: 1.5rem; //changed
+        line-height: 2.6rem; //changed
+        margin: 1.5rem auto 0; //changed
+      }
+      &--email {
+        width: 44rem; //changed
+
+        margin: 3rem auto; //changed
+        margin-left: -4rem; //new
+
+        &-input {
+          padding-left: 4.4rem; //changed
+        }
+        &-button {
+          width: 5.3rem; //changed
+
+          img {
+            float: left; //new
+          }
+        }
+      }
+      &--checkbox {
+        height: 2.8rem;
+        width: 29.5rem;
+        margin-bottom: 5rem; //changed
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &-choice {
+          position: relative;
+
+          &-input {
+            width: 2.6rem;
+            height: 2.6rem;
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            &-span {
+              display: inline-grid;
+              width: 2.6rem;
+              height: 2.6rem;
+              border-radius: 0.3rem;
+              background-color: $light-grey;
+            }
+          }
+
+          &-input:checked {
+            opacity: 1;
+            background-color: $blue;
+          }
+        }
+
+        &-label {
+          font-size: 1.6rem;
+          margin-left: 1.5rem;
+          line-height: 2.8rem;
+          color: $grey;
+
+          span {
+            color: black;
+            border-bottom: 0.1rem solid black;
+          }
+        }
+      }
+
+      &--icons {
+        height: 100%;
+        padding: 0; //changed
+        width: 100%;
+
+        &-structure {
+          display: flex;
+          justify-content: space-between;
+          margin: 5rem auto 0; //new
+
+          width: 24.4rem; //changed
+        }
+      }
+    }
+  }
+}
+@media (min-width: $large-desktop) {
+  .newsletter {
+    height: 37.1rem; //changed
+    width: 40rem; //changed
+
+    left: 14rem; //changed
+
+    &__form {
       &--heading {
         font-size: 3.2rem; //changed
         line-height: 4.4rem; //changed
@@ -216,6 +314,7 @@
       &--email {
         height: 7rem; //changed
         width: 66rem; //changed
+
         color: $subheading-color;
 
         background: $white;
