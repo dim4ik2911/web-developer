@@ -41,47 +41,70 @@ header {
   }
 }
 
-@media (min-width: $tablet) {
-  header {
-    position: absolute;
-    width: auto;
-
-    top: 9.5rem;
-    left: 10rem;
-  }
-
+@media (max-width: $narrow-screen) {
   .navigation {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 48rem;
-    height: 4rem;
-    padding: 0;
+    padding: 0 1rem; //changed
 
     &__logo {
       &--image {
-        margin: 0 1rem 1.5rem 0;
+        width: 2rem;
       }
-      &--text {
-        opacity: 1;
-        width: 7.8rem;
-      }
-    }
-
-    &__choice {
-      display: flex;
     }
 
     &__choice > a {
-      text-decoration: none;
-      color: $grey;
-      font-size: 1.6rem;
-      line-height: 2.6rem;
+      font-size: 1.2rem; //changed
+      line-height: 1.6rem; //changed
     }
     &__choice > a:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 1rem; //changed
+    }
+  }
+}
+
+@media (min-width: $small-desktop) {
+  .navigation {
+    height: 10rem; //changed
+
+    &__logo {
+      &--image {
+        height: 5rem; //changed
+        width: 3rem; //changed
+        margin: 0 1rem 1.5rem 0; //new
+      }
+      &--text {
+        opacity: 1; //chagned
+        width: 7.8rem; //new
+      }
+    }
+
+    &__choice > a {
+      font-size: 1.6rem; //changed
+      line-height: 2.6rem; //changed
+    }
+    &__choice > a:not(:last-child) {
+      margin-right: 3rem; //changed
+    }
+  }
+}
+@media (min-width: $large-desktop) {
+  header {
+    position: absolute; //new
+    width: auto; //new
+    top: 11rem; //new
+    left: 10rem; //new
+  }
+
+  .navigation {
+    background-color: transparent; //changed
+    width: 48rem; //new
+    height: 4rem; //changed
+    padding: 0; //changed
+
+    &__logo {
+      &--image {
+        height: 4rem; //changed
+        width: 2.5rem; //changed
+      }
     }
   }
 }

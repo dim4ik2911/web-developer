@@ -119,7 +119,75 @@
     }
   }
 }
-@media (min-width: $tablet) {
+
+@media (max-width: $narrow-screen) {
+  .newsletter {
+    height: 33rem; //changed
+    width: 26rem; //changed
+
+    &__form {
+      &--heading {
+        font-size: 2rem; //changed
+        line-height: 3rem; //changed
+      }
+      &--subheading {
+        font-size: 1.2rem; //changed
+        line-height: 2.3rem; //changed
+      }
+      &--email {
+        height: 4rem; //changed
+        width: 22rem; //changed
+
+        &-input {
+          font-size: 1.2rem; //changed
+
+          padding-left: 0.8rem; //changed
+        }
+        &-button {
+          width: 2rem; //changed
+
+          img {
+            width: 1rem; //changed
+          }
+        }
+      }
+      &--checkbox {
+        height: 2rem; //changed
+        width: 22rem; //changed
+
+        &-choice {
+          &-input {
+            width: 2rem; //changed
+            height: 2rem; //changed
+
+            &-span {
+              width: 2rem; //changed
+              height: 2rem; //changed
+            }
+          }
+        }
+
+        &-label {
+          font-size: 1.3rem; //changed
+        }
+      }
+
+      &--icons {
+        padding: 0 2rem; //changed
+
+        &-structure {
+          width: 100%; //changed
+
+          img {
+            //new
+            width: 3.5rem; //new
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $large-desktop) {
   .newsletter {
     background: transparent; //changed
     height: 37.1rem;
