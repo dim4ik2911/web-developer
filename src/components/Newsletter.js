@@ -40,15 +40,14 @@ const Newsletter = () => (
         <div className="newsletter__form--checkbox-choice">
           <input
             type="checkbox"
-            name="terms"
             placeholder="I agree to terms of service"
             className="newsletter__form--checkbox-choice-input"
             id="terms"
-            checked="true"
+            checked
           />
           <span className="newsletter__form--checkbox-choice-input-span"></span>
         </div>
-        <label className="newsletter__form--checkbox-label" for="terms">
+        <label className="newsletter__form--checkbox-label">
           I agree to <span>terms of service</span>
         </label>
       </div>

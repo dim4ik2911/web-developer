@@ -25,6 +25,7 @@
       position: relative;
       &-input {
         width: 29.5rem;
+
         height: 6rem;
         outline: none;
         border: 1px solid $light-grey;
@@ -79,25 +80,26 @@
         &-input {
           width: 2.6rem;
           height: 2.6rem;
-
           cursor: pointer;
-          position: absolute;
-          left: 0;
-          top: 0;
-
-          opacity: 0;
+          border-radius: 0.3rem;
 
           &-span {
-            display: inline-grid;
-            width: 2.6rem;
-            height: 2.6rem;
-            border-radius: 0.3rem;
-            background-color: $light-grey;
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+
+            // height: 2.6rem;
+            // width: 2.6rem;
+            // border-radius: 0.3rem;
+
+            background: $white;
+            border: 0.1rem solid $light-grey;
           }
         }
 
-        &-input:checked {
-          opacity: 1;
+        &-input:checked ~ &-span {
+          background: $blue;
+          border: 0.1rem solid $blue;
         }
       }
 
@@ -108,8 +110,16 @@
         color: $grey;
 
         span {
-          color: black;
-          border-bottom: 0.1rem solid black;
+          color: $dark-blue;
+          border-bottom: 0.1rem solid $dark-blue;
+        }
+        span:hover {
+          color: $blue;
+          border-bottom: 0.1rem solid $blue;
+        }
+        span:active {
+          color: #233759;
+          border-bottom: 0.1rem solid #233759;
         }
       }
     }
@@ -223,9 +233,9 @@
         &-structure {
           width: 100%; //changed
 
-          img {
+          svg {
             //new
-            width: 3.5rem; //new
+            width: 3rem; //new
           }
         }
       }
