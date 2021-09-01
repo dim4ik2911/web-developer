@@ -10,14 +10,14 @@
     &--heading {
       font-size: 2.4rem;
       line-height: 3.4rem;
-      color: $heading-color;
+      color: $dark-blue;
       font-weight: 400;
       margin: 0;
     }
     &--subheading {
       font-size: 1.4rem;
       line-height: 2.6rem;
-      color: $subheading-color;
+      color: $grey;
       margin: 1rem auto 0;
     }
     &--email {
@@ -42,10 +42,9 @@
         background-color: transparent;
         border: none;
         height: 6rem;
-        margin: 0.1rem 0;
 
-        img {
-          fill: red !important;
+        svg path {
+          fill: $dark-blue;
         }
       }
 
@@ -56,6 +55,12 @@
         box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
         border: 1px solid $blue;
         border-left: 4px solid $blue;
+      }
+      &-input:focus ~ &-button {
+        svg path {
+          fill: $blue;
+          opacity: 1;
+        }
       }
     }
 
@@ -136,20 +141,20 @@
         font-size: 1.2rem; //changed
         line-height: 2.3rem; //changed
       }
-      &--email {
-        height: 4rem; //changed
-        width: 22rem; //changed
 
+      &--email {
         &-input {
-          font-size: 1.2rem; //changed
+          width: 22rem; //changed
+          height: 4rem; //changed
 
           padding-left: 0.8rem; //changed
+          font-size: 1.2rem; //changed
         }
         &-button {
-          width: 2rem; //changed
+          height: 4rem; //changed
 
-          img {
-            width: 1rem; //changed
+          svg {
+            width: 1.8rem; //new
           }
         }
       }
@@ -207,28 +212,29 @@
         line-height: 4rem; //changed
       }
       &--subheading {
-        font-size: 1.5rem; //changed
+        font-size: 1.6rem; //changed
         line-height: 2.6rem; //changed
         margin: 1.5rem auto 0; //changed
       }
-      &--email {
-        width: 44rem; //changed
 
+      &--email {
         margin: 3rem auto; //changed
         margin-left: -4rem; //new
-
+        width: 44rem; //new
         &-input {
-          padding-left: 4.4rem; //changed
+          width: 44rem; //changed
+          height: 5rem; //changed
+          font-size: 1.6rem; //changed
+          padding-left: 4rem;
         }
         &-button {
-          width: 5.3rem; //changed
+          height: 5rem; //changed
 
-          img {
-            float: left; //new
+          svg {
+            width: 2.4rem; //new
           }
         }
       }
-
       &--checkbox {
         margin-bottom: 5rem; //changed
       }
@@ -263,22 +269,19 @@
 
         margin: 1.5rem auto 0; //changed
       }
+
       &--email {
-        height: 7rem; //changed
-        width: 66rem; //changed
-
         margin: 5rem auto; //changed
-        margin-left: -4rem; //new
-
+        margin-left: -4rem; //repeat
+        width: 66rem; //changed
         &-input {
-          padding-left: 4.4rem; //changed
+          width: 66rem; //changed
+          height: 7rem; //changed
+          // font-size: 1.7rem; //changed
         }
         &-button {
-          width: 8.3rem; //changed
-
-          img {
-            float: left; //new
-          }
+          height: 7rem; //changed
+          margin-right: 3rem; //new
         }
       }
     }
