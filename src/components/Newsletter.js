@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-
+const validator = require("validator");
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
   const submitEmail = (e) => {
     e.preventDefault();
-    console.log({ email });
+    setValidEmail(validator.isEmail(email));
   };
   return (
     <div className="newsletter">
       <div className="newsletter__form">
         <h1 className="newsletter__form--heading">Subscribe to newsletter</h1>
+        {validEmail && <p>Hey</p>}
         <p className="newsletter__form--subheading">
           Subscribe to our newsletter and get 10% discount on pineapple glasses.
         </p>
@@ -18,7 +20,7 @@ const Newsletter = () => {
           <input
             className="newsletter__form--email-input"
             placeholder="Type your email address here…"
-            type="email"
+            type="text"
             name="email"
             value={email}
             onChange={(e) => {
