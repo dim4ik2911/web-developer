@@ -1,30 +1,31 @@
 import React, { useState } from "react";
+
 const validator = require("validator");
 const Newsletter = () => {
   const [email, setEmail] = useState("");
-
-  const [validEmail, setValidEmail] = useState(false);
-
   const [checked, setChecked] = useState(true);
-  const [button, setButton] = useState(true);
+
+  const response = document.getElementById("response");
   const submitEmail = (e) => {
     e.preventDefault();
-    if (validator.isEmail(email) && checked) {
-      alert("success");
+    if (email.length === 0) {
+      response.innerHTML = "Email address is required";
+    } else if (!validator.isEmail(email)) {
+      response.innerHTML = "Please provide a valid e-mail address";
+    } else if (email.endsWith("co")) {
+      response.innerHTML =
+        "We are not accepting subscriptions from Colombia emails";
+    } else if (!checked) {
+      response.innerHTML = "You must accept the terms and conditions";
     } else {
-      alert("no way");
+      response.innerHTML = "";
     }
   };
-  // setValidEmail(validator.isEmail("foo@bar.com"));
-  // const acceptForm = () => {
-  //   setButton(validEmail && checked);
-  // };
-  // acceptForm();
+
   return (
     <div className="newsletter">
       <div className="newsletter__form">
         <h1 className="newsletter__form--heading">Subscribe to newsletter</h1>
-        {validEmail && <p>Hey</p>}
         <p className="newsletter__form--subheading">
           Subscribe to our newsletter and get 10% discount on pineapple glasses.
         </p>
@@ -59,6 +60,7 @@ const Newsletter = () => {
                 />
               </svg>
             </button>
+            <p id="response"></p>
           </div>
           <div className="newsletter__form--checkbox">
             <div className="newsletter__form--checkbox-choice">
