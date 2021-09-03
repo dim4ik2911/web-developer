@@ -1,0 +1,20 @@
+.success {
+  &__cup {
+    margin-bottom: 3.9rem;
+    &--subheading {
+      margin-bottom: 3.9rem;
+    }
+  }
+}
+@media (min-width: $large-desktop) {
+  .success {
+    margin-top: -10.5rem;
+
+    &__cup {
+      margin-bottom: 3rem;
+      &--subheading {
+        margin-bottom: 5.1rem;
+      }
+    }
+  }
+}
