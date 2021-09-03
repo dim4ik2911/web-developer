@@ -75,31 +75,43 @@
       align-items: center;
 
       &-choice {
-        position: relative;
-
-        &-input {
+        input[type="checkbox"] {
+          position: relative;
           width: 2.6rem;
           height: 2.6rem;
+          color: $blue;
+          border: 0.1rem solid $light-grey;
+          border-radius: 3px;
+          appearance: none;
+          outline: 0;
           cursor: pointer;
-          border-radius: 0.3rem;
-
-          &-span {
-            // position: absolute;
-            // left: 0;
-            // top: 0;
-
-            // height: 2.6rem;
-            // width: 2.6rem;
-            // border-radius: 0.3rem;
-
-            background: $white;
-            border: 0.1rem solid $light-grey;
+          transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+          &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0.3rem;
+            left: 0.8rem;
+            width: 6px;
+            height: 14px;
+            border-style: solid;
+            border-color: $white;
+            border-width: 0 2px 2px 0;
+            border-radius: 0.2rem;
+            transform: rotate(45deg);
+            opacity: 0;
           }
-        }
-
-        &-input:checked ~ &-span {
-          background: $blue;
-          border: 0.1rem solid $blue;
+          &:checked {
+            color: $white;
+            border-color: $blue;
+            background: $blue;
+            &::before {
+              opacity: 1;
+            }
+            ~ label::before {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
         }
       }
 
@@ -148,27 +160,59 @@
 
         a #facebook:hover {
           fill: #4267b2;
+
+          circle {
+            stroke: #4267b2;
+          }
         }
         a #facebook:active {
           fill: #2f4a80;
+
+          circle {
+            stroke: #2f4a80;
+          }
         }
         a #instagram:hover {
           fill: #c13584;
+
+          circle {
+            stroke: #c13584;
+          }
         }
         a #instagram:active {
           fill: #8f2762;
+
+          circle {
+            stroke: #8f2762;
+          }
         }
         a #twitter:hover {
           fill: #1da1f2;
+
+          circle {
+            stroke: #1da1f2;
+          }
         }
         a #twitter:active {
           fill: #177fbf;
+
+          circle {
+            stroke: #177fbf;
+          }
         }
         a #youtube:hover {
           fill: #ff0000;
+
+          circle {
+            stroke: #ff0000;
+          }
         }
         a #youtube:active {
           fill: #cc0000;
+
+          circle {
+            stroke: #cc0000;
+          }
         }
       }
     }
